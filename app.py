@@ -5,9 +5,10 @@ app = Flask(__name__)
 def index():
     return (render_template("index.html"))
 
-@app.route("/prediction",methods=["GET","POST"])
+@app.route("/main",methods=["GET","POST"])
 def main():
     q = request.form.get("q")
-    return(render_template("p.html"))
+    print(q)
+    return(render_template("main.html"))
 if __name__ == "__main__":
     app.run()
